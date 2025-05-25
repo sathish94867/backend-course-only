@@ -14,6 +14,12 @@ public class CourseController {
 
     @Autowired
     CourseService courseService;
+    
+    @GetMapping("/")
+    public String home() {
+        return "Backend is live!";
+    }
+
 
     @GetMapping("/courses")
     public List<Course> getallcourse(){
